@@ -1,0 +1,12 @@
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\bin\Debug\NetChat.exe.config
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\bin\Debug\NetChat.exe
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\bin\Debug\NetChat.pdb
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.AssemblyReference.cache
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.SuggestedBindingRedirects.cache
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.FrmSvr.resources
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.Properties.Resources.resources
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.GenerateResource.cache
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.CoreCompileInputs.cache
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.exe
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.pdb
+C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.FrmCli.resources
