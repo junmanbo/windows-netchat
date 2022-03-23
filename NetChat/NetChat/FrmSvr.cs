@@ -25,14 +25,44 @@ namespace NetChat
             MyCli.Location = new Point(this.Location.X + this.Width, this.Location.Y);
         }
 
+        int lblPosY = 0;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            int x = label2.Location.X + label2.Width;
-            int y = label2.Location.Y;
+            // 표준라벨 작성(Hide) + 라벨 클론
+            Label lbl = lblY.Clone();
+            int x = lbl.Location.X + lbl.Width;
 
-            label2.Text = textBox1.Text;
-            label2.Location = new Point(x - label2.Width, y);
-            MyCli.label1.Text = textBox1.Text;
+            // 라벨 추가
+            panel1.Controls.Add(lbl);
+
+            // 대화 표시
+            lbl.Text = textBox1.Text;
+            lbl.Visible = true;
+
+            // 라벨 위치 지정
+            lblPosY += lbl.Height;
+            lbl.Location = new Point(x-lbl.Width, lblPosY);
+
+            // 상대창에 대화표시
+            MyCli.putMsg(textBox1.Text);
+        }
+        public void putMsg(string msg)
+        {
+            // 표준라벨 작성(Hide) + 라벨 클론
+            Label lbl = lblB.Clone();
+            int x = lbl.Location.X;
+
+            // 라벨 추가
+            panel1.Controls.Add(lbl);
+
+            // 대화 표시
+            lbl.Text = msg;
+            lbl.Visible = true;
+
+            // 라벨 위치 지정
+            lblPosY += lbl.Height;
+            lbl.Location = new Point(x, lblPosY);
         }
 
         private void label1_Click(object sender, EventArgs e)
