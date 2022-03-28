@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Sockets;
+using System.Net;
 
 namespace NetChat
 {
@@ -45,7 +47,9 @@ namespace NetChat
             lbl.Location = new Point(x-lbl.Width, lblPosY);
 
             // 상대창에 대화표시
-            MyCli.putMsg(textBox1.Text);
+            // MyCli.putMsg(textBox1.Text);
+            byte[] msg = Encoding.UTF8.GetBytes(textBox1.Text);
+            mySocket.Send(msg);
         }
         public void putMsg(string msg)
         {
@@ -68,6 +72,37 @@ namespace NetChat
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        Socket listenSocket, mySocket;
+        private void btnListen_Click(object sender, EventArgs e)
+        {
+            Socket sock = new Socket(AddressFamily.InterNetwork,
+                SocketType.Stream,
+                ProtocolType.Tcp);
+
+            IPAddress hostIP = IPAddress.Parse("127.0.0.1");
+            IPEndPoint ep = new IPEndPoint(hostIP, 5142);
+            sock.Bind(ep);
+            listenSocket = sock;
+
+            listenSocket.Listen(5);
+            btnListen.Hide();
+
+        }
+
+        private void btnReceive_Click(object sender, EventArgs e)
+        {
+            byte[] bytes = new byte[256];
+            mySocket.Receive(bytes);
+            putMsg(Encoding.UTF8.GetString(bytes));
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            Socket sock = listenSocket.Accept();
+            mySocket = sock;
+            comboBox1.Text = sock.RemoteEndPoint.ToString();
         }
     }
 }

@@ -10,3 +10,14 @@ C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.
 C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.exe
 C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.pdb
 C:\Users\jun\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.FrmCli.resources
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\bin\Debug\NetChat.exe.config
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\bin\Debug\NetChat.exe
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\bin\Debug\NetChat.pdb
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.AssemblyReference.cache
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.FrmCli.resources
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.FrmSvr.resources
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.Properties.Resources.resources
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.GenerateResource.cache
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.csproj.CoreCompileInputs.cache
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.exe
+C:\Users\KHJ\Documents\windows-netchat\NetChat\NetChat\obj\Debug\NetChat.pdb
