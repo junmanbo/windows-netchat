@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using System.Net.Sockets;
 
 namespace NetChat
 {
@@ -37,5 +38,16 @@ namespace NetChat
             }
             return instance;
         }
+    }
+    public class StateObject
+    {
+        // Size of receive buffer
+        public const int BufferSize = 1024;
+
+        // Receive buffer
+        public byte[] buffer = new byte[BufferSize];
+
+        //Client socket
+        public Socket workSocket = null;
     }
 }
