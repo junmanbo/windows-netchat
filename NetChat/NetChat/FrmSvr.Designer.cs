@@ -164,7 +164,7 @@
             this.ClientSize = new System.Drawing.Size(404, 241);
             this.Controls.Add(this.panel1);
             this.Name = "FrmSvr";
-            this.Text = "NetChat-Server V4.0";
+            this.Text = "NetChat-Server V4.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSvr_FormClosing);
             this.Load += new System.EventHandler(this.FrmSvr_Load);
             this.panel1.ResumeLayout(false);

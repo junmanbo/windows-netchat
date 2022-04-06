@@ -84,6 +84,21 @@ namespace NetChat
         {
 
         }
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            string ip = "127.0.0.1";
+            foreach (var ipa in host.AddressList)
+            {
+                if (ipa.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    ip = ipa.ToString();
+                    if (ip.Split('.')[0] == "192")
+                        return ip;
+                }
+            }
+            return ip;
+        }
 
         Socket listenSocket, mySocket;
 
@@ -96,9 +111,12 @@ namespace NetChat
                 ProtocolType.Tcp);
 
             // Bind the listening socket to the port
-            //IPAddress hostIP = IPAddress.Parse(PublicIPAddress());
-            IPAddress hostIP = IPAddress.Parse("127.0.0.1");
+            IPAddress hostIP = IPAddress.Parse(PublicIPAddress());
+            //IPAddress hostIP = IPAddress.Parse("192.168.219.110");
             comboBox1.Text = hostIP.ToString();
+
+            hostIP = IPAddress.Parse(GetLocalIPAddress());
+            this.Text = hostIP.ToString();
 
             IPEndPoint ep = new IPEndPoint(hostIP, 5142);
             sock.Bind(ep);
@@ -117,6 +135,7 @@ namespace NetChat
             btnAccept.Hide();
             btnReceive.Hide();
         }
+
         // Thread signal
         public static ManualResetEvent allDone = new ManualResetEvent(false);
 
@@ -185,7 +204,8 @@ namespace NetChat
 
                 if (bytesRead > 0)
                 {
-                    msg = msg.Split(':')[0] + ": " + Encoding.UTF8.GetString(state.buffer, 0, bytesRead);
+                    //msg = msg.Split(':')[0] + ": " + Encoding.UTF8.GetString(state.buffer, 0, bytesRead);
+                    msg = Encoding.UTF8.GetString(state.buffer, 0, bytesRead);
                     MySvr.putMsg(msg);
                     sock.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
                         new AsyncCallback(ReadCallback), state);

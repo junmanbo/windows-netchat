@@ -148,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(404, 241);
             this.Controls.Add(this.panel1);
             this.Name = "FrmCli";
-            this.Text = "NetChat-Client V4.0";
+            this.Text = "NetChat-Client V4.1";
             this.Load += new System.EventHandler(this.FrmCli_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
